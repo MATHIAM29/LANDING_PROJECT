@@ -1,0 +1,128 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>CALCUL DU SALAIR NET</title>
+        <script type="text/javascript">
+        function nom(){
+            alert(document.FORMUL.NOM.value=document.getElementById("NOM").value);
+        }
+            function solde(){
+                document.getElementByID("NH").value*1000;
+            }
+        </script>
+    </head>
+    <style>
+        body{background-color:gray;
+            width:800px;
+            height:600px;
+            border :2px solid black;
+            }
+
+        form{background-color:white;
+            border :2px solid black;
+            width:800px;
+            height:300px;
+            margin-top: 250px;
+            }
+        /*gestion des couleurs de boutons valider et annuler*/
+        input[type=submit]{
+            width:100px;
+            margin-left:5px;
+            background-color: green;
+        }
+        input[type=reset]{
+            width:100px;
+            margin-left:5px;
+            background-color: red;
+        }
+      fieldset{
+          padding:5px 10px 10px 20px;
+          margin-right: 1px;
+          border:1px;
+      }
+      #field1{
+          float:left;
+      }
+      #field2{
+          float:right;
+      }
+      table,th,td{
+          border:1px solid black;
+          border-collapse: collapse;
+      }
+      th, td {
+            padding: 10px;
+            }
+    </style>
+    
+        <body>
+                <form name="FORMUL" action = "#" method = "#">
+                    <fieldset id="field1">
+                    <caption>PANNEAU DE SAISI</caption><br><br>
+
+                    <label for="NOM">NOM DE L'EMPLOYE : </label>
+                     <input type = "text" id="NOM"  name="NOM" value="" /><br><br>
+
+                     <label for="CTG">CATEGORIE : </label>
+                     <select name="CTG" id="CTG">
+                     <option value="A">A</option>
+                     <option value="B">B</option>
+                     <option value="C">C</option>
+                     </select><br><br>
+
+                     <label for="HEURE">NOMBRE D'HEURE: </label>
+                     <input type = "text" id="NH"  name="HEURE" /><br>
+
+                     <p>A t il effectuer des heures suplementaires ?</p>
+
+                     <label for="OUI">OUI: </label>
+                     <input type = "radio" name="oui" value="OUI" ><br>
+
+                     <label for="NON">NON: </label>
+                     <input type = "radio" name="NON" value="NON" ><br>
+
+                     <label for="HS">HEURES SUP : </label>
+                     <select name="HS" id="HS">
+                     <option value="0">0 HEURE</option>
+                     <option value="1">1 HEURE</option>
+                     <option value="2">2 HEURES</option>
+                     <option value="3">3 HEURES</option>
+                     <option value="4">4 HEURES</option>
+                     <option value="5">5 HEURES</option>
+                     <option value="6">6 HEURES</option>
+                     <option value="1">7 HEURES</option>
+                     <option value="8">8 HEURES</option>
+                     <option value="9">9 HEURES</option>
+                     <option value="10">10 HEURES</option>
+                     <option value="11">11 HEURES</option>
+                     <option value="12">12 HEURES</option>
+                     </select><br><br>
+                    
+                     <input type = "submit" value = "VALIDER" id="valider" onclick="VALIDER";>
+                     <input type ="reset" value = "ANNULER" id="annuler" onclick="VALIDER";>
+                    </fieldset>
+               
+             <fieldset id="field2">
+                 <table>
+                    <legend>ENREGISTREMENT</legend><br>
+                    <tr>
+                        <th>NOM</th>
+                        <th>SALAIRE</th>
+                        <th>RAS</th>
+                        <th>SALAIRE NET</th>
+                    </tr>
+                    <tr>
+                        <td><input type ="text"  id="NOM" size="2"/></td>
+                        <td><input type ="text"  id="SALAIRE" size="2"/></td>
+                        <td><input type ="text"  id="RAS" size="2"/></td>
+                        <td><input type ="text"  id="SN" size="3"/></td>
+                    </tr>
+                </table>
+                </fieldset>
+            </form>
+                     
+                    </fieldset>
+
+        </body>
+</html>
+
