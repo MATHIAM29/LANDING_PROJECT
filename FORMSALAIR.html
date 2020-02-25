@@ -2,12 +2,20 @@
     <head>
         <meta charset="utf-8">
         <title>CALCUL DU SALAIR NET</title>
-        <script type="text/javascript">
+        <script>
+            document.getElementById("NT").innerHTML = document.getElementById("NOM").value
         function nom(){
-            alert(document.FORMUL.NOM.value=document.getElementById("NOM").value);
+                 var nome = document.getElementById("NOM").value;
         }
-            function solde(){
-                document.getElementByID("NH").value*1000;
+        function solde(){
+                var sold = document.getElementById("HS").value;
+            }
+            var tau;
+        function taux(){
+                var categorie = document.getElementById("CTG").value;
+                 if(categorie=A){tau = document.getElementById("NH").value*10000;}
+                 else if(categorie==B){tau = document.getElementById("NH").value*7500;}
+                 else{tau=document.getElementById("NH").value*5000;}
             }
         </script>
     </head>
@@ -56,12 +64,12 @@
     </style>
     
         <body>
-                <form name="FORMUL" action = "#" method = "#">
+                <form name="salary" action = "" method = "post">
                     <fieldset id="field1">
                     <caption>PANNEAU DE SAISI</caption><br><br>
 
                     <label for="NOM">NOM DE L'EMPLOYE : </label>
-                     <input type = "text" id="NOM"  name="NOM" value="" /><br><br>
+                     <input type = "text" id="NE"  name="NOM" value="MATHIAM"/><br><br>
 
                      <label for="CTG">CATEGORIE : </label>
                      <select name="CTG" id="CTG">
@@ -98,8 +106,8 @@
                      <option value="12">12 HEURES</option>
                      </select><br><br>
                     
-                     <input type = "submit" value = "VALIDER" id="valider" onclick="VALIDER";>
-                     <input type ="reset" value = "ANNULER" id="annuler" onclick="VALIDER";>
+                     <input type = "submit" value = "VALIDER"  onclick="nom()"/>
+                     <input type ="reset" value = "ANNULER"  onclick="nom()"/>
                     </fieldset>
                
              <fieldset id="field2">
@@ -112,10 +120,10 @@
                         <th>SALAIRE NET</th>
                     </tr>
                     <tr>
-                        <td><input type ="text"  id="NOM" size="2"/></td>
-                        <td><input type ="text"  id="SALAIRE" size="2"/></td>
-                        <td><input type ="text"  id="RAS" size="2"/></td>
-                        <td><input type ="text"  id="SN" size="3"/></td>
+                        <th><input type="text"  id="NT" value="" size="2"/></th>
+                        <th><input type="text"  id="SLRE" value="" size="2"/></th>
+                        <th><input type="text"  id="RAS" value= "" size="2"/></th>
+                        <th><input type="text"  id="SN" value= "" size="3"/></th>
                     </tr>
                 </table>
                 </fieldset>
